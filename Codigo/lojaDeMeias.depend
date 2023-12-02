@@ -1,40 +1,78 @@
 # depslib dependency file v1.0
-1701400091 source:c:\users\soare\code\loja-de-meias\codigo\cadastroproduto.c
+1701555348 source:c:\users\soare\code\loja-de-meias\codigo\cadastroproduto.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
+	<string.h>
 	"variaveisGlobais.h"
 	"cadastroProduto.h"
 	"vendaProduto.h"
+	"relatorioEstoque.h"
+	"relatorioVenda.h"
 
-1701399869 c:\users\soare\code\loja-de-meias\codigo\variaveisglobais.h
+1701550199 c:\users\soare\code\loja-de-meias\codigo\variaveisglobais.h
 
-1701388414 source:c:\users\soare\code\loja-de-meias\codigo\main.c
+1701555301 source:c:\users\soare\code\loja-de-meias\codigo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
+	<string.h>
 	"variaveisGlobais.h"
 	"cadastroProduto.h"
 	"vendaProduto.h"
+	"relatorioEstoque.h"
+	"relatorioVenda.h"
 
 1701385363 c:\users\soare\code\loja-de-meias\codigo\cadastroproduto.h
 
-1701400091 source:c:\users\soare\code\loja-de-meias\codigo\funcoesglobais.c
+1701556065 source:c:\users\soare\code\loja-de-meias\codigo\funcoesglobais.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
+	<string.h>
 	"variaveisGlobais.h"
 	"cadastroProduto.h"
 	"vendaProduto.h"
+	"relatorioEstoque.h"
+	"relatorioVenda.h"
 
-1701399869 c:\users\soare\code\loja-de-meias\codigo\vendaproduto.h
+1701548302 c:\users\soare\code\loja-de-meias\codigo\vendaproduto.h
 	"variaveisGlobais.h"
 
-1701388750 source:c:\users\soare\code\loja-de-meias\codigo\vendaproduto.c
+1701556065 source:c:\users\soare\code\loja-de-meias\codigo\vendaproduto.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
+	<string.h>
 	"variaveisGlobais.h"
 	"cadastroProduto.h"
 	"vendaProduto.h"
+	"relatorioEstoque.h"
+	"relatorioVenda.h"
+
+1701549458 c:\users\soare\code\loja-de-meias\codigo\relatorioestoque.h
+
+1701549528 c:\users\soare\code\loja-de-meias\codigo\relatoriovenda.h
+
+1701556065 source:c:\users\soare\code\loja-de-meias\codigo\relatorioestoque.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"variaveisGlobais.h"
+	"cadastroProduto.h"
+	"vendaProduto.h"
+	"relatorioEstoque.h"
+	"relatorioVenda.h"
+
+1701555301 source:c:\users\soare\code\loja-de-meias\codigo\relatoriovenda.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"variaveisGlobais.h"
+	"cadastroProduto.h"
+	"vendaProduto.h"
+	"relatorioEstoque.h"
+	"relatorioVenda.h"
 

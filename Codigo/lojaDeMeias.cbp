@@ -31,9 +31,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="cadastroProduto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cadastroProduto.h" />
+		<Unit filename="cadastroProduuto.h" />
+		<Unit filename="funcoesGlobais.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="variaveisGlobais.h" />
+		<Unit filename="vendaProduto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="vendaProduto.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

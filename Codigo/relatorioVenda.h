@@ -1,0 +1,10 @@
+#ifndef RELATORIOVENDA_H_INCLUDED
+#define RELATORIOVENDA_H_INCLUDED
+
+
+
+void apresentarVendas();
+
+
+
+#endif // RELATORIOVENDA_H_INCLUDED
