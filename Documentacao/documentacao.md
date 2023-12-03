@@ -162,24 +162,27 @@ O sistema de gestão de vendas de meias apresenta as seguintes restrições de t
 | Entradas | Resultado | Válido |
 | ---------- | ------------ | -------- |
 | 1 | Usuário escolhe a opção de cadastrar um novo produto no estoque. | sim |
+| 2 | Usuário escolhe a opção de vender um produto do estoque. | sim |
+| 3 | Usuário escolhe a opção de ver relatorio do estoque. | sim |
+| 4 | Usuário escolhe a opção de ver relatorio de venda do dia. | sim |
+| 0 | Usuário escolhe a opção de cadastrar um novo produto no estoque. | sim |
 | 27 | Sistema exibe "Opção inválida" e pede uma nova opção. | não |
-| tipo: Adulto | Sistema exibe o menu principal novamente. | sim |
 
 ### Cadastro de Produto
 
-| Entradas | Resultado | Válido |
-| ---------- | ------------ | -------- |
-| Tipo: Meia | Sistema solicita as informações do produto (estilo, quantidade, valor de custo, valor de venda). | sim |
-| Quantidade: 10, Valor de Custo: R$ 5, Valor de Venda: R$ 10 | Sistema armazena o produto no estoque. | sim |
-| Valor de Custo: R$ -5 | Sistema exibe "Valor de custo inválido" e pede um novo valor. | não |
+| Entradas | Válido |
+| ---------- | -------- |
+| Tipo: Adulto | sim |
+| Estilo: Liso | sim |
+| Quantidade: 10| sim |
+| Valor de Custo: R$ 5 | sim |
+| Valor de Venda: R$ 10 | sim |
 
 ### Realizar Venda de Produto
 
 | Entradas | Resultado | Válido |
 | ---------- | ------------ | -------- |
-| Tipo: Meia, Estilo: Esportiva, Preço: R$ 15 | Sistema verifica se o produto está no estoque. | sim |
-| Tipo: Calçado | Sistema exibe "Produto não encontrado no estoque." | não |
-| Tipo: Meia, Estilo: Casual, Preço: R$ -5 | Sistema exibe "Preço inválido" e pede um novo preço. | não |
+| Tipo: Meia, Estilo: Lisa, Preço: R$ 15 | Sistema verifica se o produto está no estoque. | sim |
 
 ### Apresentar Relatório de Estoque
 
