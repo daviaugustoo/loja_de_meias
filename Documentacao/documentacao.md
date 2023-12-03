@@ -1,5 +1,5 @@
 Trabalho Prático Interdisciplinar
-Salão de Festas Patati Patatá
+Loja de Meias
 ===================
 
 Índice Analítico
