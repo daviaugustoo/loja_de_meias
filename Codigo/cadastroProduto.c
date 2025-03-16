@@ -3,52 +3,62 @@
 #include <locale.h>
 #include <string.h>
 
-#include "variaveisGlobais.h"
+#include "estoque.h"
+#include "meiaFactory.h"
 #include "cadastroProduto.h"
-#include "vendaProduto.h"
-#include "relatorioEstoque.h"
-#include "relatorioVenda.h"
+#include "funcoesGlobais.h"
 
 // Função para cadastrar um novo produto
-void cadastrarProduto(){
+void cadastrarProduto() {
     setlocale(LC_ALL, "Portuguese");
 
     int escolha;
+    Meia* estoque = getEstoque(); // Obtém o estoque como Singleton
 
     do {
-        // Obter informações do usuário para cadastrar o produto
+        if (quantidadeTotal >= 100) {
+            printf("Estoque cheio! Não é possível cadastrar mais produtos.\n");
+            return;
+        }
+
+        char tipo[20], estilo[20];
+        int quantidade;
+        float custo, preco;
+
         printf("Digite se ela é infantil ou adulta: ");
-        scanf(" %20[^\n]s", meias[totalProduto].tipo);
+        scanf(" %20[^\n]", tipo);
         limparbuffer();
 
         printf("Digite se ela é lisa ou estampada: ");
-        scanf(" %20[^\n]s", meias[totalProduto].estilo);
+        scanf(" %20[^\n]", estilo);
         limparbuffer();
 
         printf("Digite a quantidade: ");
-        scanf(" %i", &meias[totalProduto].quantidade);
+        scanf("%d", &quantidade);
         limparbuffer();
 
         printf("Digite o valor de custo: R$");
-        scanf(" %f", &meias[totalProduto].custo);
+        scanf("%f", &custo);
         limparbuffer();
 
         printf("Digite o valor de venda: R$");
-        scanf(" %f", &meias[totalProduto].preco);
+        scanf("%f", &preco);
         limparbuffer();
 
-        totalProduto++; // Incrementar o total de produtos cadastrados
+        // Criando meia com Factory Method
+        estoque[quantidadeTotal++] = criarMeia(tipo, estilo, quantidade, custo, preco);
 
-        // Solicitar ao usuário se deseja cadastrar outro produto
+        printf("\nProduto cadastrado com sucesso!\n");
+
         printf("\n1 - Cadastrar outro produto\n");
         printf("0 - SAIR\n\n");
         printf("Digite sua escolha: ");
         scanf("%i", &escolha);
 
-        // Verificar se a escolha é válida
         if (escolha != 1 && escolha != 0){
             opcaoInvalida();
             return;
         }
+
     } while (escolha != 0);
 }
