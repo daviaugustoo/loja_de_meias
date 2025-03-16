@@ -3,52 +3,51 @@
 #include <locale.h>
 #include <string.h>
 
-// Inclusão dos cabeçalhos dos arquivos de cabeçalho personalizados
-#include "variaveisGlobais.h"
+// InclusÃ£o dos cabeÃ§alhos dos mÃ³dulos refatorados
+#include "estoque.h"
+#include "meiaFactory.h"
 #include "cadastroProduto.h"
 #include "vendaProduto.h"
 #include "relatorioEstoque.h"
 #include "relatorioVenda.h"
 
-// Função para exibir o menu principal
-void menu();
+void menu(); // ProtÃ³tipo da funÃ§Ã£o do menu
 
-int main()
-{
-    // Configurar a localidade para permitir a exibição de caracteres especiais
+int main() {
     setlocale(LC_ALL, "Portuguese");
 
-    // Inicializar variável global de lucro
-    lucro = 0;
-
     int escolha;
+    Meia* estoque = getEstoque(); // ObtÃ©m o estoque como Singleton
+    float lucro = 0; // Inicializa o lucro
 
-    // Loop principal do programa
     do {
-        // Exibir o menu e obter a escolha do usuário
         menu();
-        scanf("%i", &escolha);
+        if (scanf("%i", &escolha) != 1) { // ValidaÃ§Ã£o para evitar entrada invÃ¡lida
+            printf("\nEntrada invÃ¡lida. Tente novamente.\n");
+            while (getchar() != '\n'); // Limpa o buffer de entrada
+            continue;
+        }
+        
         printf("\n");
 
-        // Realizar a ação de acordo com a escolha do usuário
         switch (escolha) {
             case 0:
-                return 0; // Encerrar o programa
-                break;
+                printf("Encerrando o programa...\n");
+                return 0;
             case 1:
-                cadastrarProduto(); // Chamar função de cadastro de produto
+                cadastrarProduto();
                 break;
             case 2:
-                venderProduto(); // Chamar função de venda de produto
+                venderProduto();
                 break;
             case 3:
-                apresentarEstoque(); // Chamar função de apresentação do estoque
+                apresentarEstoque();
                 break;
             case 4:
-                apresentarVendas(); // Chamar função de apresentação de vendas e lucro
+                apresentarVendas();
                 break;
             default:
-                printf("\n\nOpção Inválida. Tente novamente.\n\n");
+                printf("\n\nOpÃ§Ã£o InvÃ¡lida. Tente novamente.\n\n");
                 break;
         }
     } while (escolha != 0);
@@ -56,12 +55,13 @@ int main()
     return 0;
 }
 
-// Função para exibir o menu
+// FunÃ§Ã£o para exibir o menu
 void menu() {
-    printf("\n");
+    printf("\n======= MENU PRINCIPAL =======\n");
     printf("1 - Cadastrar produto no estoque\n");
     printf("2 - Vender\n");
-    printf("3 - Relatório do estoque\n");
-    printf("4 - Relatório de venda e lucro\n\n");
-    printf("Digite a opção desejada: ");
+    printf("3 - RelatÃ³rio do estoque\n");
+    printf("4 - RelatÃ³rio de venda e lucro\n");
+    printf("0 - Sair\n");
+    printf("Digite a opÃ§Ã£o desejada: ");
 }
